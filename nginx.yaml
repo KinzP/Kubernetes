@@ -1,22 +1,7 @@
-kind: Service
-apiVersion: v1
-metadata:
-  name: nginx
-  labels:
-    app: nginx
-spec:
-  selector:
-    app: nginx
-  ports:
-  - port: 80
-    protocol: TCP
-    targetPort: 80
-  type: ClusterIP
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: nginx-deploy
   labels:
     app: nginx
 spec:
